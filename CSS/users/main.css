@@ -1,0 +1,8 @@
+.error-text {
+    background: rgb(250, 197, 197) !important;
+    margin-top: 10px;
+    padding: 3px;
+    transition: all 0.3s ease;
+    display: none;
+    font-size: 10px !important;
+}
