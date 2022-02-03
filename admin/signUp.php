@@ -4,7 +4,7 @@
     <section class="form-section">
         <div class="myCard">
             <div class="form-header">
-                <h3>Register Your Details</h3>
+                <h3>Register Your Details | Admin</h3>
             </div>
             <form action="" method="POST">
                 <div class="error-text"></div>

@@ -5,7 +5,7 @@
     <section class="form-section">
         <div class="myCard">
             <div class="form-header">
-                <h3>Login Your Details</h3>
+                <h3>Login Your Details | Admin</h3>
             </div>
             <form action="" method="POST">
                 <div class="error-text">This is an error text</div>
