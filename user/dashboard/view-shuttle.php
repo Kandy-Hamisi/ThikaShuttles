@@ -125,6 +125,44 @@ if (isset($_GET['price'])) {
                             </div>
                         </div>
                     </div>
+
+                    <div class="card card-shadow mb4">
+                        <div class="card-header py-3">
+                            <h3 class="m-0 font-weight-bold text-primary"><?php echo $r['shuttle_no']; ?></h3>
+                        </div>
+                        <div class="card-body">
+                            
+                                <?php 
+                                    $seats = array("B8", "C7", "A1", "B1");
+
+                                    $ais = array("A", "B", "E", "C", "D");
+
+                                    $aisle =  array("E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9");;
+                                    echo "<table border='1'>";
+                                    // foreach ($ais as $i) {
+                                    //     echo "<tr>";
+                                    //     for ($r=0; $r <= 10 ; $r++) { 
+                                    //         $seat = $i.$r;
+                                    //         if (in_array($seat, $seats)) {
+                                    //             $image = "<div class='booked'></div>";
+                                    //         }elseif (!in_array($seat, $aisle)) {
+                                    //             $image = "<div class='empty'></div>";
+                                    //         }else {
+                                    //             $image = "&nbsp;";
+                                    //         }
+                                    //         echo "<td>$image</td>";
+                                    //     }
+                                    //     echo "<tr>";
+                                    // }
+                                    echo "<tr>
+                                        <td>Hello</td>
+                                    </tr>";
+                                    echo "<table>";
+                                ?>
+                            
+
+                        </div>
+                    </div>
                     
 
                 </div>

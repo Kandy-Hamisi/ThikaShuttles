@@ -111,7 +111,7 @@ if (isset($_GET['cancel'])) {
                                                 <td><?php echo $ret['shuttle_no']; ?></td>
                                                 <td><?php echo $ret['shuttle_seats']; ?></td>
                                                 <td><?php echo (mysqli_num_rows($ans) > 0) ? "Few Seats remaining" : $ret['shuttle_status']; ?></td>
-                                                <td><a href="view-shuttle.php?id=<?php echo $ret['shuttle_id']; ?>"><i class="icofont-pen"></i></a></td>
+                                                <td><a href="view-shuttle.php?id=<?php echo $ret['shuttle_id']; ?>" class="btn btn-primary">View Seats</a></td>
                                             </tr>
                                         <?php endwhile ?>
 

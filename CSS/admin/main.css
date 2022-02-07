@@ -21,3 +21,19 @@
     display: none;
     transition: 0.3s ease;
 }
+
+
+/* seats */
+.booked {
+    background: #dc143c;
+    color: #fff;
+    width: 33px;
+    height: 26px;
+}
+
+.empty{
+    background: darkgray;
+    color: #333;
+    width: 33px;
+    height: 26px;
+}
