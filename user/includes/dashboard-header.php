@@ -45,4 +45,15 @@ if (isset($_SESSION['username'])) {
     <link href="../../sb/css/sb-admin-2.css" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/users/main.css">
     <title><?php echo $_SESSION['username']; ?></title>
+    <style>
+        .myliner {
+            display: flex;
+            gap: 10px;
+        }
+
+        .seat {
+            background: #d5d5d5;
+            padding: 10px;
+        }
+    </style>
 </head>

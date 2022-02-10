@@ -37,3 +37,8 @@
     width: 33px;
     height: 26px;
 }
+
+.myliner {
+    display: flex;
+}
+

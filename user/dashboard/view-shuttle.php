@@ -96,17 +96,12 @@ if (isset($_GET['price'])) {
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
-                                    <tbody>
+                                    <div class="myliner" >
                                         <?php while($row = mysqli_fetch_assoc($res)): ?>
-                                            
-                                            <tr>
-                                                <td><?php echo $row['seat_no']; ?></td>
-                                                <td><?php echo $row['seat_status']; ?></td>
-                                                <td><a class="clicker" href="view-shuttle.php?id=<?php echo $_GET['id']; ?>&price=<?php echo $row['seat_price']; ?>&seat=<?php echo $row['seat_id']; ?>" id="selSeat"><i class="icofont-ui-check"></i></a></td>
-                                            </tr>
-                                        <?php endwhile ?>
-
-                                    </tbody>
+                                            <div class="seat"><a href=""><?php echo $row['seat_no']; ?></a></div>
+                                            <div class="empty">space</div>
+                                        <?php endwhile; ?>
+                                    </div>
                                 </table>
                                 <div class="finalprice">
                                 <?php echo (isset($_GET['price'])) ? $price : ""; ?>
@@ -132,34 +127,9 @@ if (isset($_GET['price'])) {
                         </div>
                         <div class="card-body">
                             
-                                <?php 
-                                    $seats = array("B8", "C7", "A1", "B1");
-
-                                    $ais = array("A", "B", "E", "C", "D");
-
-                                    $aisle =  array("E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9");;
-                                    echo "<table border='1'>";
-                                    // foreach ($ais as $i) {
-                                    //     echo "<tr>";
-                                    //     for ($r=0; $r <= 10 ; $r++) { 
-                                    //         $seat = $i.$r;
-                                    //         if (in_array($seat, $seats)) {
-                                    //             $image = "<div class='booked'></div>";
-                                    //         }elseif (!in_array($seat, $aisle)) {
-                                    //             $image = "<div class='empty'></div>";
-                                    //         }else {
-                                    //             $image = "&nbsp;";
-                                    //         }
-                                    //         echo "<td>$image</td>";
-                                    //     }
-                                    //     echo "<tr>";
-                                    // }
-                                    echo "<tr>
-                                        <td>Hello</td>
-                                    </tr>";
-                                    echo "<table>";
-                                ?>
-                            
+                                <?php while($row = mysqli_fetch_assoc($res)): ?>
+                                    <div class="seat"><a href=""><?php echo $row['seat_no']; ?></a></div>
+                                <?php endwhile; ?>
 
                         </div>
                     </div>
