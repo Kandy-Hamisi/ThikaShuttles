@@ -9,20 +9,7 @@ $selShuttle = "SELECT * FROM shuttles WHERE shuttle_id = {$_GET['id']}";
 $run = mysqli_query($mysqli, $selShuttle);
 $r = mysqli_fetch_assoc($run);
 
-if (isset($_GET['update'])) {
-    
-    $id = $_GET['update'];
-    $status = "Disbursed";
 
-    // update query || approving the loan
-    $disburse = "UPDATE borrowers SET approval_status = '$status' WHERE id = $id";
-    $result = mysqli_query($mysqli, $disburse);
-    if ($result) {
-        header("Location: borrowers.php");
-    }else{
-        echo "<script>window.alert('Something went wrong');</script>";
-    }
-}
 
 // if cancel icon is clicked
 
@@ -96,12 +83,16 @@ if (isset($_GET['price'])) {
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
-                                    <div class="myliner" >
+                                    
+                                    <tbody>
                                         <?php while($row = mysqli_fetch_assoc($res)): ?>
-                                            <div class="seat"><a href=""><?php echo $row['seat_no']; ?></a></div>
-                                            <div class="empty">space</div>
-                                        <?php endwhile; ?>
-                                    </div>
+                                            <tr>
+                                                <td class="seat"><?php echo $row['seat_no']; ?></td>
+                                                <td><?php echo $row['seat_status']; ?></td>
+                                                <td><a class="clicker" href="view-shuttle.php?id=<?php echo $_GET['id']; ?>&price=<?php echo $row['seat_price']; ?>&seat=<?php echo $row['seat_id']; ?>" id="selSeat"><i class="icofont-ui-check"></i></a></td>
+                                            </tr>
+                                        <?php endwhile ?>
+                                    </tbody>
                                 </table>
                                 <div class="finalprice">
                                 <?php echo (isset($_GET['price'])) ? $price : ""; ?>
